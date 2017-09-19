@@ -26,7 +26,7 @@ We consider "1" for positives class (P), and "0" for negatives class (N)
 An array with two columns, first one corresponding to TPR and second one corresponding to FPR.
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{RocCurves}, \link{TestOptimal}, \link{TrainOptimal}}
+\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves},  \link{TestOptimal}, \link{TrainOptimal}}
 \references{
 Drummond, C., & Holte, R. C. (2006). Cost curves: An improved method for visualizing classifier performance.}
 \examples{

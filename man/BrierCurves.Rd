@@ -78,7 +78,7 @@ Where:
 An array with AUBC (Area Under Brier Curve) for each test.
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{RocCurves}, \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
+\seealso{\link{CostCurves}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{CostLines}, \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
 \references{
 Ferri, C., Hernandez-orallo, J., & Flach, P. A. (2011). Brier curves: a new cost-based visualisation of classifier performance. In Proceedings of the 28th International Conference on Machine Learning (ICML-11) (pp. 585-592).
 }

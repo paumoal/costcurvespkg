@@ -44,7 +44,7 @@ The similar idea over \emph{testOptimal}. This function plot the cost curves usi
 An array with AUCC (Area Under Cost Curve) for each test.
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines},  \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{RocCurves}, \link{TestOptimal}, \link{TP_FP.rates}}
+\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines},  \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{TestOptimal}, \link{TP_FP.rates}}
 \references{
 #It reference is not exact.
 Hernandez-Orallo, J., Flach, P., & Ferri, C. (2013). ROC curves in cost space. Machine learning, 93(1), 71-91.

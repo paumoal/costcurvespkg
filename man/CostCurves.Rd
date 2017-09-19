@@ -77,7 +77,7 @@ Kendall Curves: \link{KendallCurves}
 A list of arrays with AUCCs of different cost curves selected.
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{BrierCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{RocCurves}, \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
+\seealso{\link{BrierCurves},  \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{CostLines}, \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
 \references{
 Drummond, C., & Holte, R. C. (2006). Cost curves: An improved method for visualizing
 classifier performance.

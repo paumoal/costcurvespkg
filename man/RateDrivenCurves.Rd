@@ -73,7 +73,7 @@ Where:
 An array with AUKC (Area Under Kendall Curve) for each test.
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RocCurves}, \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
+\seealso{\link{BrierCurves}, \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions},  \link{TestOptimal}, \link{TP_FP.rates}, \link{TrainOptimal}}
 \references{
 Hernandez-Orallo, J., Flach, P., & Ferri, C. (2013). ROC curves in cost space. Machine learning, 93(1), 71-91.
 }

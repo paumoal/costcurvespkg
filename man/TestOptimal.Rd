@@ -38,7 +38,7 @@ The lower envelope at any given \emph{c} (cost) or \emph{z} (skew) value is defi
 A list of lists, for each classifier is returned: extreme points of each segment of lower envelope, thresholds and AUCC (area under curve cost).
 }
 \author{Paulina Morillo: \email{paumoal@inf.upv.es}}
-\seealso{\link{BrierCurves},  \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves}, \link{RocCurves}, \link{TP_FP.rates}, \link{TrainOptimal}}
+\seealso{\link{BrierCurves},  \link{CostCurves}, \link{CostLines}, \link{KendallCurves}, \link{predictions}, \link{RateDrivenCurves},  \link{TP_FP.rates}, \link{TrainOptimal}}
 \references{
 Drummond, C., & Holte, R. C. (2006). Cost curves: An improved method for visualizing classifier performance.
 
