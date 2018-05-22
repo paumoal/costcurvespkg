@@ -1,7 +1,7 @@
 \name{BrierCurves}
 \alias{BrierCurves}
 \title{Plotting Brier Curves}
-\description{Function to plot loss against operating condition using the probabilistic choice method (Brier Curves)}
+\description{Function to plot loss against operating condition using the score-driven threshold choice method (Brier Curves)}
 \usage{
 BrierCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
             plotOFF=FALSE, gridOFF=TRUE, pointsOFF=TRUE, legendOFF=FALSE,
@@ -9,16 +9,16 @@ BrierCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
             xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions}{A list of predictions arrays, each array contains scores or predictions of a specific classifier.}
+	\item{predictions}{A list of predictions arrays, each array contains predicted scores of a specific classifier.}
 	\item{classes}{A list of classes arrays, each array contains binary classes.}
-	\item{uniquec}{If it is TRUE, the same array classes is used for each array in a list predictions.}
-	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost.}
-	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
+	\item{uniquec}{If it is TRUE, the same array of classes is used for each array in a list predictions.}
+	\item{loss2skew}{If it is TRUE, loss is computed with respect to Skew otherwise loss is used.}
+	\item{hold}{If it is TRUE, the plot is not closed. This is useful to include  new curves above the current curve.}
 	\item{plotOFF}{Disable/enable plot visualization, only return AUC values.}
 	\item{gridOFF}{Disable/enable grid visualization.}
 	\item{pointsOFF}{Disable/enable point marks visualization.}
 	\item{legendOFF}{Disable/enable legend visualization.}
-	\item{main}{title.}
+	\item{main}{Title of the plot.}
 	\item{xlab}{x label.}
 	\item{ylab}{y label.}
 	\item{namesClassifiers}{An array with names of each classifier.}
@@ -27,50 +27,25 @@ BrierCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
 	\item{col}{Line color. }
 	\item{pch}{Point type. }
 	\item{cex}{Size point. }
-	\item{xPosLegend}{x coordinate to be used to position the legend.}
-	\item{yPosLegend}{y coordinate to be used to position the legend.}
+	\item{xPosLegend}{x coordinate to be used in the position of the legend.}
+	\item{yPosLegend}{y coordinate to be used in the position of the legend.}
 	\item{cexL}{size of box legend.}
 	}
 \details{
 \strong{Definition:}
 
 
-Function that plots the expected cost/skew against loss. For a given probabilistic classifier and operating condition defined by cost proportion, the probabilistic treshold choice method sets the treshold as fallows:
+Function that plots the expected cost/skew against loss. For a given probabilistic classifier and operating condition defined by cost proportion,   the Score-Driven treshold choice method 
+	sets the threshold equal to the operating condition (cost proportion or skew).
 
 
-\deqn{T(c)=c}
+The Brier curve for a given classifier is defined as a plot of loss against operating condition using 
+	 score-driven threshold choice method.
 
 
-If the operating condition is defined by skew, the treshold is set as fallows:
+Assuming the score-driven threshold choice method, expected loss under a uniform distribution of cost proportions is equal to
+the model’s Brier score. Using skews, we arrive at the prior-independent version of the Brier score.
 
-
-\deqn{T(z)=z-T(c)z/c}
-
-
-The Brier curve for a given classifier is defined as a plot of loss against operating condition using the probabilistic treshold choice method. 
-
-
-In particular, if the operating conditin is determined by cost proportion the Brier curve is defined by:
-
-
-\deqn{BC(c)=2(c*pi0(1-F0(t))+(1-c)pi1*F1(t))}
-
-
-A Brier curve for skew is defined by
-
-
-\deqn{BC(z)=z(1-F0(t))+(1-z)F1(t))} 
-
-
-Where:
-\tabular{rlll}{
-\tab c:   \tab cost values of x_axis between [0, 1]. \cr
-\tab z:   \tab skew values of x_axis between [0, 1]. \cr
-\tab t:   \tab treshold t=T(c) or t=T(z) as appropriate. \cr
-\tab pi0: \tab negative class proportion (Y==0)/length(Y). \cr
-\tab pi1: \tab positive class proportion (Y==1)/length(Y). \cr
-\tab F1(t):   \tab false positive rate of specific treshold. \cr
-\tab 1-F0(t): \tab true positive rate of specific treshold. \cr}
 }
 
 
