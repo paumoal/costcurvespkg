@@ -1,12 +1,12 @@
 \name{TP_FP.rates}
 \alias{TP_FP.rates}
 \title{Calculates TP and FP rates}
-\description{Calculates TP and FP rates, given and any of preds and classes}
+\description{Calculates TP and FP rates, given a list of scores and a  list of classes}
 \usage{
 TP_FP.rates(predictions, classes)
 }
 \arguments{
-	\item{predictions}{An array where each element contains a score or prediction of each instance}
+	\item{predictions}{An array where each element contains a predicted score of each instance}
 	\item{classes}{A vector with class for each instance}
 	}
 \details{
