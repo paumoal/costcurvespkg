@@ -1,27 +1,28 @@
 \name{CostLines}
 \alias{CostLines}
 \title{Plotting Cost Curves based on Cost or Skew}
-\description{Function to plot  cost curves based on \emph{cost} or \emph{skew}. If interested analysing the influence of class proportion and cost proportion at the same time, it's possible choice \emph{"loss by skew"} option, in this case the \emph{"loss by cost"} curve is normalized. }
+\description{Function to plot  cost lines based on \emph{cost} or \emph{skew}.
+	  }
 \usage{
 CostLines(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
           gridOFF=TRUE, legendOFF=FALSE, main, xlab, ylab, namesClassifiers,
            lwd, lty, col, xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions}{A list of predictions arrays, each array contains scores or predictions of a specific classifier.}
-	\item{classes}{A list of classes arrays, each array contains binary classes.}
-	\item{uniquec}{If it is TRUE, the same array classes is used for each array in a list predictions.}
-	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
-	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
+	\item{predictions}{A list with  predicted scores.}
+	\item{classes}{A list with labels, (only binary classes).}
+	\item{uniquec}{If TRUE, the same array classes is used for each array in a list predictions.}
+	\item{loss2skew}{If  TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
+	\item{hold}{If it is TRUE, the plot is maintained open allowing to insert new curves on the same plot.}
 	\item{gridOFF}{Disable/enable grid visualization.}
 	\item{legendOFF}{Disable/enable legend visualization.}
 	\item{main}{title.}
 	\item{xlab}{x label.}
 	\item{ylab}{y label.}
 	\item{namesClassifiers}{An array with names of each classifier.}
-	\item{lwd}{Line width. It is posible select any valid option to the graphics parameters of R.} 
-	\item{lty}{Line type. It is posible select any valid option to the graphics parameters of R.}
-	\item{col}{Line color. It is posible select any valid option to the graphics parameters of R.}
+	\item{lwd}{Line width. } 
+	\item{lty}{Line type.}
+	\item{col}{Line color.}
 	\item{xPosLegend}{x coordinate to be used to position the legend.}
 	\item{yPosLegend}{y coordinate to be used to position the legend.}
 	\item{cexL}{size of box legend.}
