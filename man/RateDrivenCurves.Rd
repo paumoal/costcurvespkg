@@ -1,6 +1,6 @@
 \name{RateDrivenCurves}
 \alias{RateDrivenCurves}
-\title{Plotting of lower envelope of Cost Curves}
+\title{Plotting the lower envelope of Cost Curves using the Rate Driven Treshold Choice}
 \description{Function to plot  Cost Curves using Rate Driven Treshold Choice}
 \usage{
 RateDrivenCurves(predictions, classes, uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
@@ -9,8 +9,8 @@ RateDrivenCurves(predictions, classes, uniquec=FALSE, loss2skew=FALSE, hold=FALS
                  xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions}{A list of predictions arrays, each array contains scores or predictions of a specific classifier.}
-	\item{classes}{A list of classes arrays, each array contains binary classes.}
+	\item{predictions}{A list with  predicted scores.}
+	\item{classes}{A list with labels, (only binary classes).}
 	\item{uniquec}{If it is TRUE, the same array classes is used for each array in a list predictions.}
 	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
 	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
