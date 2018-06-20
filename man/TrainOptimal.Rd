@@ -1,7 +1,7 @@
 \name{TrainOptimal}
 \alias{TrainOptimal}
-\title{Plotting Cost Curves using Optimal Training treshold choice}
-\description{Function to plot  optimal training curve}
+\title{Plotting Cost Curves using the Optimal Training treshold choice}
+\description{Function to plot  the optimal training curve}
 \usage{
 TrainOptimal(predictions_train, classes_train, predictions_test, classes_test,
                 uniquecT=FALSE, uniquect=FALSE, refuseT=FALSE, loss2skew=FALSE,
@@ -10,15 +10,15 @@ TrainOptimal(predictions_train, classes_train, predictions_test, classes_test,
                 cex, xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions_train}{A list of predictions arrays, each array contains scores or probabilities of a specific classifier training.}
-	\item{classes_train}{A list of classes arrays, each array contains binary classes of training.}
-	\item{predictions_test}{A list of predictions arrays, each array contains scores test.}
-	\item{classes_test}{A list of classes arrays, each array contains binary classes test.}
+	\item{predictions_train}{A list with  predicted scores. Train Dataset}
+	\item{classes_train}{A list with labels, (only binary classes). Train Dataset}
+	\item{predictions_test}{A list with  predicted scores. Train Dataset}
+	\item{classes_test}{A list with labels, (only binary classes). Test Dataset}
 	\item{uniquecT}{If it is TRUE, the same array classes is used for each array in a list predictions Training.}
 	\item{uniquect}{If it is TRUE, the same array classes is used for each array in a list predictions test.}
 	\item{refuseT}{It is possible to use the same training classifier for every test.}
 	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
-	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
+	\item{hold}{If it is TRUE, the plot is maintained open allowing to insert new curves on the same plot.}
 	\item{plotOFF}{Disable/enable plot visualization, only return AUC values.}
 	\item{gridOFF}{Disable/enable grid visualization.}
 	\item{pointsOFF}{Disable/enable point marks visualization.}
@@ -38,7 +38,7 @@ TrainOptimal(predictions_train, classes_train, predictions_test, classes_test,
 	\item{cexL}{size of box legend.}
 	}
 \details{
-The similar idea over \emph{testOptimal}. This function plot the cost curves using a optimal treshold train on a test.
+This function plot the cost curves  on a test considering the optimal threshold on a train dataset.
 }
 \value{
 An array with AUCC (Area Under Cost Curve) for each test.
