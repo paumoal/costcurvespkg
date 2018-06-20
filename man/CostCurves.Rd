@@ -1,7 +1,7 @@
 \name{CostCurves}
 \alias{CostCurves}
 \title{CostCurves}
-\description{Function to plot  Cost Curves with different option of treshold choice method}
+\description{Function to plot cost curves using different treshold choice methods}
 \usage{
 CostCurves(predictions, classes, cost_lines = TRUE,
                  test_optimal = TRUE, train_optimal = FALSE,
@@ -15,27 +15,25 @@ CostCurves(predictions, classes, cost_lines = TRUE,
                  lty, pch, cex,xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions}{A list of predictions or scores arrays.}
-	\item{classes}{A list of classes arrays, each array contains binary classes.}
-	\item{cost_lines}{Lines cost are displayed if it is TRUE.}
-	\item{test_optimal}{Option to plot cost curves using test optimal treshold
+	\item{predictions}{A list with  predicted scores}
+	\item{classes}{A list with labels, (only binary classes).}
+	\item{cost_lines}{If TRUE Lines cost are displayed }
+	\item{test_optimal}{Plot cost curves using test optimal treshold
 	choice method.}
-	\item{train_optimal}{Option to plot cost curves using train optimal
+	\item{train_optimal}{Plot cost curves using train optimal
 	treshold choice method. }
-	\item{predictionsT}{A list of classes arrays, each array contains predictions
-	or scores of training classifier. It's necessary only if option train optimal is TRUE.}
-	\item{classesT}{A list of classes arrays, each array contains binary train classes.
-	It's necessary only if option train_optimal is TRUE.}
-	\item{uniquec}{If it is TRUE, the same array classes is used for each array in a list predictions.}
-	\item{uniquecT}{If it is TRUE, the same array classes is used for each array in a list
-	train predictions. It's ecessary only if the option train_optimal is TRUE.}
-	\item{uniqueTrain}{If it is TRUE, the same array of predictionsT and classesT is used
+	\item{predictionsT}{A list with  predicted scores. Required when option train_optimal is TRUE.}
+	\item{classesT}{A list with labels, (only binary classes). Required when option train_optimal is TRUE.}
+	\item{uniquec}{If TRUE, the same labels are used for each array in a list predictions.}
+	\item{uniquecT}{If TRUE, the same array classes is used for each array in a list
+	train predictions. Required when option train_optimal is TRUE.}
+	\item{uniqueTrain}{If TRUE, the same array of predictionsT and classesT is used
 	for each array in a list predictions. It's necessary only if the option train_optimal is TRUE.}
-	\item{score_driven}{If it is TRUE, plot cost curves using score driven treshold choice method.}
-	\item{rate_driven}{If it is TRUE, plot cost curves using rate driven treshold choice method.}
-	\item{kendall_curves}{If it is TRUE, plot cost curves using kendall driven treshold choice method.}
-	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
-	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
+	\item{score_driven}{If  TRUE, plot the cost curves using the score driven treshold choice method.}
+	\item{rate_driven}{If TRUE, plot the cost curves the using rate driven treshold choice method.}
+	\item{kendall_curves}{If  TRUE, plot cost curves using kendall driven treshold choice method.}
+	\item{loss2skew}{If  TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
+	\item{hold}{If it is TRUE, the plot is maintained open allowing to plot new curves on the same plot.}
 	\item{gridOFF}{Disable/enable grid visualization.}
 	\item{pointsOFF}{Disable/enable point marks visualization.}
 	\item{legendOFF}{Disable/enable legend visualization.}
@@ -53,7 +51,7 @@ CostCurves(predictions, classes, cost_lines = TRUE,
 	\item{cexL}{Size point. It is posible select any valid option to the graphics parameters of R.}
 	}
 \details{
-Ploting Cost curves with different treshold choice method.
+ This function allows to plot cost curves considering different treshold choice method.
 
 
 Cost Lines: \link{CostLines}
