@@ -1,7 +1,8 @@
 \name{KendallCurves}
 \alias{KendallCurves}
 \title{Plotting Kendall Curves }
-\description{Function to plot  the expected loss of the model, using the rate driven treshold choice method once the loss of a perfect ranker is discounted}
+\description{Function to plot  the expected loss of the model, using the rate driven treshold choice method 
+	     discounting the loss of a perfect ranker}
 \usage{
 KendallCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
                plotOFF=FALSE, gridOFF=TRUE, pointsOFF=TRUE, legendOFF=FALSE,
@@ -9,11 +10,11 @@ KendallCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
                xPosLegend,yPosLegend, cexL)
 }
 \arguments{
-	\item{predictions}{A list of predictions arrays, each array contains scores or predictions of a specific classifier.}
-	\item{classes}{A list of classes arrays, each array contains binary classes.}
+	\item{predictions}{A list with  predicted scores.}
+	\item{classes}{A list with labels, (only binary classes).}
 	\item{uniquec}{If it is TRUE, the same array classes is used for each array in a list predictions.}
 	\item{loss2skew}{If it is TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
-	\item{hold}{If it is TRUE, the view is maintained to plot a new curve above the current curve.}
+	\item{hold}{If it is TRUE, the plot is maintained open allowing to insert new curves on the same plot..}
 	\item{plotOFF}{Disable/enable plot visualization, only return AUC values.}
 	\item{gridOFF}{Disable/enable grid visualization.}
 	\item{pointsOFF}{Disable/enable point marks visualization.}
