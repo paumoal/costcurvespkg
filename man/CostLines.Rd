@@ -28,7 +28,7 @@ CostLines(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
 	\item{cexL}{size of box legend.}
 	}
 \details{
-The loss which is produced at a decision treshold \emph{t} and a cost proportion \emph{c} is given by formula:
+The loss which is produced at a decision threshold \emph{t} and a cost proportion \emph{c} is given by formula:
 
 
 \strong{Loss by Cost:}
@@ -37,7 +37,7 @@ The loss which is produced at a decision treshold \emph{t} and a cost proportion
 \deqn{2(c*pi0(1-F0(t))+(1-c)pi1*F1(t))}
 
 
-The loss which is produced at a decision treshold \emph{t} and a skew \emph{z} is given by formula:
+The loss which is produced at a decision threshold \emph{t} and a skew \emph{z} is given by formula:
 
 
 \strong{Loss by Skew:}
@@ -50,11 +50,11 @@ Where:
 \tabular{rlll}{
 \tab c:   \tab cost values of x_axis between [0, 1]. \cr
 \tab z:   \tab skew values of x_axis between [0, 1]. \cr
-\tab t:   \tab treshold. \cr
+\tab t:   \tab threshold. \cr
 \tab pi0: \tab negative class proportion (Y==0)/length(Y). \cr
 \tab pi1: \tab positive class proportion (Y==1)/length(Y). \cr
-\tab F1(t):   \tab false positive rate of specific treshold. \cr
-\tab 1-F0(t): \tab true positive rate of specific treshold. \cr}
+\tab F1(t):   \tab false positive rate of specific threshold. \cr
+\tab 1-F0(t): \tab true positive rate of specific threshold. \cr}
 }
 \value{
 No return value.

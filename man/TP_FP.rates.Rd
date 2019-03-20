@@ -10,7 +10,7 @@ TP_FP.rates(predictions, classes)
 	\item{classes}{A vector with class for each instance}
 	}
 \details{
-We calculate a \emph{TPR} (True positive rate)  and \emph{FPR}  (False positive rate) rates for each treshold between each pair of scores or predictions values.
+We calculate a \emph{TPR} (True positive rate)  and \emph{FPR}  (False positive rate) rates for each threshold between each pair of scores or predictions values.
 
 
 We consider "1" for positives class (P), and "0" for negatives class (N)

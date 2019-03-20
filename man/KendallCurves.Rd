@@ -1,7 +1,7 @@
 \name{KendallCurves}
 \alias{KendallCurves}
 \title{Plotting Kendall Curves }
-\description{Function to plot  the expected loss of the model, using the rate driven treshold choice method 
+\description{Function to plot  the expected loss of the model, using the rate driven threshold choice method 
 	     discounting the loss of a perfect ranker}
 \usage{
 KendallCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
@@ -52,11 +52,11 @@ Where:
 \tabular{rlll}{
 \tab c:   \tab cost values of x_axis between [0, 1]. \cr
 \tab z:   \tab skew values of x_axis between [0, 1]. \cr
-\tab t:   \tab treshold t=R^-1(c) or  t=R^-1(c) as appropriate, and c=R(t) \cr
+\tab t:   \tab threshold t=R^-1(c) or  t=R^-1(c) as appropriate, and c=R(t) \cr
 \tab pi0: \tab negative class proportion (Y==0)/length(Y). \cr
 \tab pi1: \tab positive class proportion (Y==1)/length(Y). \cr
-\tab F1(t):   \tab false positive rate of specific treshold. \cr
-\tab 1-F0(t): \tab true positive rate of specific treshold. \cr
+\tab F1(t):   \tab false positive rate of specific threshold. \cr
+\tab 1-F0(t): \tab true positive rate of specific threshold. \cr
 \tab R(c):   \tab recall that the predicted positive rate. \cr}
 
 

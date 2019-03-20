@@ -1,7 +1,7 @@
 \name{CostCurves}
 \alias{CostCurves}
 \title{CostCurves}
-\description{Function to plot cost curves using different treshold choice methods}
+\description{Function to plot cost curves using different threshold choice methods}
 \usage{
 CostCurves(predictions, classes, cost_lines = TRUE,
                  test_optimal = TRUE, train_optimal = FALSE,
@@ -18,10 +18,10 @@ CostCurves(predictions, classes, cost_lines = TRUE,
 	\item{predictions}{A list with  predicted scores}
 	\item{classes}{A list with labels, (only binary classes).}
 	\item{cost_lines}{If TRUE Lines cost are displayed }
-	\item{test_optimal}{Plot cost curves using test optimal treshold
+	\item{test_optimal}{Plot cost curves using test optimal threshold
 	choice method.}
 	\item{train_optimal}{Plot cost curves using train optimal
-	treshold choice method. }
+	threshold choice method. }
 	\item{predictionsT}{A list with  predicted scores. Required when option train_optimal is TRUE.}
 	\item{classesT}{A list with labels, (only binary classes). Required when option train_optimal is TRUE.}
 	\item{uniquec}{If TRUE, the same labels are used for each array in a list predictions.}
@@ -29,9 +29,9 @@ CostCurves(predictions, classes, cost_lines = TRUE,
 	train predictions. Required when option train_optimal is TRUE.}
 	\item{uniqueTrain}{If TRUE, the same array of predictionsT and classesT is used
 	for each array in a list predictions. It's necessary only if the option train_optimal is TRUE.}
-	\item{score_driven}{If  TRUE, plot the cost curves using the score driven treshold choice method.}
-	\item{rate_driven}{If TRUE, plot the cost curves the using rate driven treshold choice method.}
-	\item{kendall_curves}{If  TRUE, plot cost curves using kendall driven treshold choice method.}
+	\item{score_driven}{If  TRUE, plot the cost curves using the score driven threshold choice method.}
+	\item{rate_driven}{If TRUE, plot the cost curves the using rate driven threshold choice method.}
+	\item{kendall_curves}{If  TRUE, plot cost curves using kendall driven threshold choice method.}
 	\item{loss2skew}{If  TRUE, loss by Skew is plotted otherwise loss by cost is plotted.}
 	\item{hold}{If it is TRUE, the plot is maintained open allowing to plot new curves on the same plot.}
 	\item{gridOFF}{Disable/enable grid visualization.}
@@ -51,22 +51,22 @@ CostCurves(predictions, classes, cost_lines = TRUE,
 	\item{cexL}{Size point. It is posible select any valid option to the graphics parameters of R.}
 	}
 \details{
- This function allows to plot cost curves considering different treshold choice method.
+ This function allows to plot cost curves considering different threshold choice method.
 
 
 Cost Lines: \link{CostLines}
 
 
-Test Optimal treshold choice method: \link{TestOptimal}
+Test Optimal threshold choice method: \link{TestOptimal}
 
 
-Train Optimal treshold choice method: \link{TrainOptimal}
+Train Optimal threshold choice method: \link{TrainOptimal}
 
 
-Score Driven treshold choice method: \link{BrierCurves}
+Score Driven threshold choice method: \link{BrierCurves}
 
 
-Rate Driven treshold choice method: \link{RateDrivenCurves}
+Rate Driven threshold choice method: \link{RateDrivenCurves}
 
 
 Kendall Curves: \link{KendallCurves}

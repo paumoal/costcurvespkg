@@ -1,5 +1,5 @@
 ####################################################################
-#Test Optimal treshold choice
+#Test Optimal threshold choice
 #Inputs: predictions, classes ,loss2skew, ...
 #predictions: list of Scores array values
 #classes: list of class boolean array
@@ -86,11 +86,11 @@ TestOptimal=function(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FA
     index_break_points=c(which(diff(index_TPmin)!=0))
     if (length(index_break_points)==0){
       xmin=c(0,1);ymin=c(0,0);
-      treshold=pd[index_TPmin[1]+1]
+      threshold=pd[index_TPmin[1]+1]
     }else{
       xmin=x[index_break_points+1];xmin=c(0,xmin, 1);
       ymin=ymin_t[index_break_points+1];ymin=c(0,ymin, 0);
-      treshold=c(rbind(pd[index_TPmin[index_break_points]+1],
+      threshold=c(rbind(pd[index_TPmin[index_break_points]+1],
                        pd[index_TPmin[index_break_points+1]+1]));}
     if(plotOFF==FALSE){
       if(missing(main)){main="Loss by Cost"}
@@ -115,8 +115,8 @@ TestOptimal=function(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FA
     ymin=ymin_t[index_break_points+1];ymin=c(0,ymin, 0);
     if (length(index_break_points)==0){
       xmin=c(0,1);ymin=c(0,0);
-      treshold=pd[index_TPmin[1]+1]
-    }else{treshold=c(rbind(pd[index_TPmin[index_break_points]+1],
+      threshold=pd[index_TPmin[1]+1]
+    }else{threshold=c(rbind(pd[index_TPmin[index_break_points]+1],
                            pd[index_TPmin[index_break_points+1]+1]));}
     if(plotOFF==FALSE){
       if(missing(main)){main="Loss by Skew"}
@@ -130,9 +130,9 @@ TestOptimal=function(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FA
   nameslegend = c(nameslegend, paste(namesClassifiers[pred],
                                      " AUCC_tO: ", AUC, sep=""))
 
-  result=list(xmin, treshold[!duplicated(treshold, fromLast=TRUE)], AUC)
+  result=list(xmin, threshold[!duplicated(threshold, fromLast=TRUE)], AUC)
   names(result)<-c(paste("break_points", namesClassifiers[pred]),
-                   paste("treshold", namesClassifiers[pred]),
+                   paste("threshold", namesClassifiers[pred]),
                    paste("AUC", namesClassifiers[pred]))
   Result <- append(Result, result)
     }

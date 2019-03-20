@@ -1,5 +1,5 @@
 ####################################################################
-#Kendall Curves (score driven treshold)
+#Kendall Curves (score driven threshold)
 #Inputs: predictions, classes ,loss2skew, ...
 #predictions: list of Scores array values
 #classes: list of class boolean array

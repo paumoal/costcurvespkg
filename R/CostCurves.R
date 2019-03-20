@@ -173,11 +173,11 @@ you should define other colors to visualize curves better")}
       index_break_points=c(which(diff(index_TPmin)!=0))
       if (length(index_break_points)==0){
         xmin=c(0,1);ymin=c(0,0);
-        treshold=pd[index_TPmin[1]+1]
+        threshold=pd[index_TPmin[1]+1]
       }else{
         xmin=x[index_break_points+1];xmin=c(0,xmin, 1);
         ymin=ymin_t[index_break_points+1];ymin=c(0,ymin, 0);
-        treshold=c(rbind(pd[index_TPmin[index_break_points]+1],
+        threshold=c(rbind(pd[index_TPmin[index_break_points]+1],
                          pd[index_TPmin[index_break_points+1]+1]));}
 
     }else{
@@ -190,8 +190,8 @@ you should define other colors to visualize curves better")}
       ymin=ymin_t[index_break_points+1];ymin=c(0,ymin, 0);
       if (length(index_break_points)==0){
         xmin=c(0,1);ymin=c(0,0);
-        treshold=pd[index_TPmin[1]+1]
-      }else{treshold=c(rbind(pd[index_TPmin[index_break_points]+1],
+        threshold=pd[index_TPmin[1]+1]
+      }else{threshold=c(rbind(pd[index_TPmin[index_break_points]+1],
                              pd[index_TPmin[index_break_points+1]+1]));}
     }
     if (plotOFF==FALSE){
@@ -199,11 +199,11 @@ you should define other colors to visualize curves better")}
       if(pointsOFF==FALSE){
         points(xmin, ymin,col=col,pch =pch,cex = cex)}}
     AUC<-round(auc(xmin,ymin, dens=1000),3)
-    Result<-list(xmin, treshold[!duplicated(treshold, fromLast=TRUE)], AUC)
+    Result<-list(xmin, threshold[!duplicated(threshold, fromLast=TRUE)], AUC)
     return (Result)
   }
   ####################################################################
-  TrainOptimal = function(S, c, break_points, treshold, loss2skew = FALSE,
+  TrainOptimal = function(S, c, break_points, threshold, loss2skew = FALSE,
                              lwd, lty, col,pch, cex, pointsOFF = TRUE){
     ####################################################################
     AUC<- 0;  optimal=c(NULL)
@@ -213,8 +213,8 @@ you should define other colors to visualize curves better")}
     S_test=V1[,1];c_test=V1[,2];
     FP=c(NULL); TP=c(NULL);
     y<-c(NULL); yconex<-c(NULL);  k<-0;
-    for (i in seq(treshold)){
-      Ps=(treshold[i]>S_test)*1
+    for (i in seq(threshold)){
+      Ps=(threshold[i]>S_test)*1
       TP=c(TP,sum((Ps==1)*(c_test==0))/sum(c_test==0))
       FP=c(FP,sum((Ps==1)*(c_test==1))/sum(c_test==1))}
     #Loss by Cost Curve
@@ -514,8 +514,8 @@ you should define other colors to visualize curves better")}
                            col = NULL, pch = NULL, lwd = NULL,
                            lty = NULL, cex = NULL, plotOFF = FALSE)
       breakpoints<-unlist(test_O[1])
-      treshold<-unlist(test_O[2])
-      AUC_TO<-TrainOptimal(S, c, breakpoints, treshold, loss2skew = loss2skew, pointsOFF = pointsOFF,
+      threshold<-unlist(test_O[2])
+      AUC_TO<-TrainOptimal(S, c, breakpoints, threshold, loss2skew = loss2skew, pointsOFF = pointsOFF,
                               col = col_plot[3], pch = pch_plot[3], lwd = lwd_plot[3],
                               lty = lty_plot[3], cex = cex_plot[3])
       namesLegend<-c(namesLegend, paste(namesClassifiers[pred], " AUC_TO: ", AUC_TO, sep=""))

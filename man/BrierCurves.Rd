@@ -1,4 +1,4 @@
-\name{BrierCurves}
+﻿\name{BrierCurves}
 \alias{BrierCurves}
 \title{Plotting Brier Curves}
 \description{Function to plot loss against operating condition using the score-driven threshold choice method (Brier Curves)}
@@ -35,7 +35,7 @@ BrierCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
 \strong{Definition:}
 
 
-Function that plots the expected cost/skew against loss. For a given probabilistic classifier and operating condition defined by cost proportion,   the Score-Driven treshold choice method 
+Function that plots the expected cost/skew against loss. For a given probabilistic classifier and operating condition defined by cost proportion,   the Score-Driven threshold choice method 
 	sets the threshold equal to the operating condition (cost proportion or skew).
 
 

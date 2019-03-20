@@ -1,5 +1,5 @@
 ####################################################################
-#Train Optimal treshold choice
+#Train Optimal threshold choice
 #Inputs: predictions_train, classes_train , predicitions_test, ...
 #predictions_train: list of Scores array values
 #train classifier
@@ -97,9 +97,9 @@ TrainOptimal = function(predictions_train, classes_train,
   FP=c(NULL); TP=c(NULL);
   y<-c(NULL); yconex<-c(NULL);  k<-0;
   break_points<-unlist(optimal[1])
-  treshold<-unlist(optimal[2])
-  for (i in seq(treshold)){
-    Ps=(treshold[i]>S_test)*1
+  threshold<-unlist(optimal[2])
+  for (i in seq(threshold)){
+    Ps=(threshold[i]>S_test)*1
     TP=c(TP,sum((Ps==1)*(c_test==0))/sum(c_test==0))
     FP=c(FP,sum((Ps==1)*(c_test==1))/sum(c_test==1))}
   ####################################################################

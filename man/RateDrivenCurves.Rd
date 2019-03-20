@@ -1,7 +1,7 @@
 \name{RateDrivenCurves}
 \alias{RateDrivenCurves}
-\title{Plotting the lower envelope of Cost Curves using the Rate Driven Treshold Choice}
-\description{Function to plot  Cost Curves using Rate Driven Treshold Choice}
+\title{Plotting the lower envelope of Cost Curves using the Rate Driven Threshold Choice}
+\description{Function to plot  Cost Curves using Rate Driven threshold Choice}
 \usage{
 RateDrivenCurves(predictions, classes, uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
                  plotOFF=FALSE, gridOFF=TRUE, pointsOFF=TRUE, legendOFF=FALSE,
@@ -32,7 +32,7 @@ RateDrivenCurves(predictions, classes, uniquec=FALSE, loss2skew=FALSE, hold=FALS
 	\item{cexL}{size of box legend.}
 	}
 \details{
-The rate-driven treshold choice method is a natural way of choosing the tresholds, especially when we only have a ranking or a poorly calibrated probabilistic caddifier.
+The rate-driven threshold choice method is a natural way of choosing the thresholds, especially when we only have a ranking or a poorly calibrated probabilistic caddifier.
 
 
 The rate driven cost curves by cost is defined as a plot of:
@@ -61,11 +61,11 @@ Where:
 \tabular{rlll}{
 \tab c:   \tab cost values of x_axis between [0, 1]. \cr
 \tab z:   \tab skew values of x_axis between [0, 1]. \cr
-\tab t:   \tab treshold t=R^-1(c) or  t=R^-1(c) as appropriate, and c=R(t) \cr
+\tab t:   \tab threshold t=R^-1(c) or  t=R^-1(c) as appropriate, and c=R(t) \cr
 \tab pi0: \tab negative class proportion (Y==0)/length(Y). \cr
 \tab pi1: \tab positive class proportion (Y==1)/length(Y). \cr
-\tab F1(t):   \tab false positive rate of specific treshold. \cr
-\tab 1-F0(t): \tab true positive rate of specific treshold. \cr
+\tab F1(t):   \tab false positive rate of specific threshold. \cr
+\tab 1-F0(t): \tab true positive rate of specific threshold. \cr
 \tab R(c):   \tab recall that the predicted positive rate. \cr}
 
 }

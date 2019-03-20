@@ -1,6 +1,6 @@
 \name{TrainOptimal}
 \alias{TrainOptimal}
-\title{Plotting Cost Curves using the Optimal Training treshold choice}
+\title{Plotting Cost Curves using the Optimal Training threshold choice}
 \description{Function to plot  the optimal training curve}
 \usage{
 TrainOptimal(predictions_train, classes_train, predictions_test, classes_test,
