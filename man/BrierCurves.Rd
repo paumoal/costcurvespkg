@@ -44,7 +44,7 @@ The Brier curve for a given classifier is defined as a plot of loss against oper
 
 
 Assuming the score-driven threshold choice method, expected loss under a uniform distribution of cost proportions is equal to
-the model’s Brier score. Using skews, we arrive at the prior-independent version of the Brier score.
+the Brier score. Using skews, we arrive at the prior-independent version of the Brier score.
 
 }
 

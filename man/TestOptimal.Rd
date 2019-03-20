@@ -32,7 +32,7 @@ TestOptimal(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
 	\item{cexL}{size of box legend.}
 	}
 \details{
-The lower envelope at any given \emph{c} (cost) or \emph{z} (skew) value is define as the lowest loss value on any of the given cost curves at that \emph{c} or \emph{z}. Each segment of lower envelope or test optimal correspond to points on a ROC covex hull.
+The lower envelope at any given \emph{c} (cost) or \emph{z} (skew) value is defined as the lowest loss value on any of the given cost curves at that \emph{c} or \emph{z}. Each segment of lower envelope or test optimal correspond to points on a ROC covex hull.
 }
 \value{
 A list of lists, for each classifier is returned: extreme points of each segment of lower envelope, thresholds and AUCC (area under curve cost).

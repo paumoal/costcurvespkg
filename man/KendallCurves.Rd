@@ -33,7 +33,7 @@ KendallCurves(predictions,classes,uniquec=FALSE, loss2skew=FALSE, hold=FALSE,
 	\item{cexL}{size of box legend.}
 	}
 \details{
-The Kendall curve is define as fallows:
+The Kendall curve is defined as fallows:
 
 
 \deqn{Q(c)=2pi1*F1(R^-1(c)),  if c<=pi0} 
